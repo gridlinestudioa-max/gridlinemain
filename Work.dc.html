@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/shadow.css">
+  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/styles.css">
+  <script src="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    a{color:var(--text-primary);text-decoration:none;}
+    a:hover{color:var(--text-secondary);}
+    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
+  </style>
+</helmet>
+
+<div style="min-height:100vh;background:var(--surface-page);color:var(--text-primary);">
+
+  <dc-import name="Header" hint-size="100%,105px"></dc-import>
+
+  <main data-screen-label="Work">
+    <section style="max-width:1200px;margin:0 auto;padding:64px 40px 40px;">
+      <div style="font-family:var(--font-mono);font-weight:400;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);">Portfolio — 2026</div>
+      <h1 style="font-family:var(--font-display);font-weight:600;font-size:72px;line-height:1.02;letter-spacing:-0.035em;margin:24px 0 0;max-width:900px;text-wrap:balance;">Rebrands,<br>from juice bar to gym.</h1>
+      <p style="font-family:var(--font-body);font-weight:300;font-size:19px;line-height:1.6;color:var(--text-secondary);max-width:600px;margin:28px 0 0;">A selection of rebrands for small businesses and independent brands. Hover a panel to open it, then click through to the full project behind each identity.</p>
+    </section>
+
+    <section style="max-width:1200px;margin:0 auto;padding:0 40px 112px;">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;border-top:1px solid var(--border-ink);padding-top:24px;margin-bottom:28px;">
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);">Selected work</span>
+        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Hover to open</span>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;height:1200px;">
+        <sc-for list="{{ panels }}" as="p" hint-placeholder-count="3">
+          <a href="{{ p.href }}" style="{{ p.panelStyle }}" onMouseEnter="{{ p.onEnter }}" onFocus="{{ p.onEnter }}">
+            <image-slot id="{{ p.slotId }}" src="{{ p.slotSrc }}" fit="cover" radius="16" placeholder="Drop project image" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;background:{{ p.slotBg }};"></image-slot>
+            <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(8,7,12,0.18) 0%,rgba(8,7,12,0.34) 46%,rgba(8,7,12,0.82) 100%);"></div>
+            <sc-if value="{{ p.comingSoon }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+                <span style="font-family:var(--font-mono);font-weight:400;font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gl-cream);border:1px solid rgba(255,252,243,0.5);border-radius:var(--radius-full,999px);padding:12px 26px;background:rgba(8,7,12,0.4);backdrop-filter:blur(2px);">Coming soon</span>
+              </div>
+            </sc-if>
+            <div style="position:absolute;top:26px;left:34px;right:34px;z-index:2;display:flex;align-items:center;justify-content:space-between;font-family:var(--font-mono);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gl-cream);">
+              <span style="opacity:0.55;">{{ p.num }}</span>
+              <span style="padding:5px 12px;border:1px solid rgba(255,252,243,0.4);border-radius:var(--radius-full,999px);color:var(--gl-cream);">{{ p.division }}</span>
+            </div>
+            <div style="position:relative;z-index:2;">
+              <h3 style="font-family:var(--font-display);font-weight:600;font-size:clamp(30px,3.4vw,46px);line-height:1.02;letter-spacing:-0.03em;margin:0;color:var(--gl-cream);">{{ p.title }}</h3>
+              <div style="{{ p.revealStyle }}">
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gl-cream);opacity:0.6;margin-top:16px;">{{ p.cat }} — {{ p.year }}</div>
+                <p style="font-family:var(--font-body);font-weight:300;font-size:17px;line-height:1.6;color:var(--gl-paper-4);margin:10px 0 0;max-width:560px;">{{ p.sub }}</p>
+                <span style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gl-cream);margin-top:22px;">
+                  {{ p.cta }}
+                  <svg width="26" height="10" viewBox="0 0 26 10" fill="none" style="display:block;"><path d="M0 5h24M20 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </span>
+              </div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { projects: [], hovered: 0 };
+
+  async componentDidMount() {
+    try {
+      const m = await import('./site-data.js');
+      this.setState({ projects: m.projects || [] });
+    } catch (e) { /* ignore */ }
+  }
+
+  renderVals() {
+    const hrefById = {
+      panacea: 'Panacea Junkiez.dc.html', ashworth: 'Ashworth.dc.html', k1: 'K1 Fitness.dc.html',
+      'cross-county': 'Coors Banq. 410.dc.html', 'marrow-bakery': 'Andes - Next Gen Toyota Camry.dc.html', 'circle-k': 'Circle K - ARCA Chevrolet.dc.html',
+    };
+    const bgById = { panacea: '#2f5a3c' };
+    const srcById = { 'marrow-bakery': './04-001-19a-msmi1pa0-uwgv.webp' };
+    const projects = this.state.projects;
+    const hovered = this.state.hovered;
+    const ease = 'cubic-bezier(0.22,0.61,0.36,1)';
+
+    const panels = projects.map((p, i) => {
+      const open = i === hovered;
+      const comingSoon = p.id === 'k1';
+      const panelStyle = {
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        overflow: 'hidden',
+        flex: open ? '4.2 1 0' : '1 1 0',
+        minHeight: 0,
+        padding: '34px',
+        background: 'var(--gl-ink-9)',
+        color: 'var(--gl-cream)',
+        borderRadius: 'var(--radius-lg, 16px)',
+        border: '1px solid var(--border-ink)',
+        cursor: comingSoon ? 'default' : 'pointer',
+        transition: 'flex 460ms ' + ease,
+      };
+      const revealStyle = {
+        overflow: 'hidden',
+        maxHeight: open ? '220px' : '0px',
+        opacity: open ? 1 : 0,
+        transform: open ? 'translateY(0)' : 'translateY(8px)',
+        transition: 'max-height 460ms ' + ease + ', opacity 320ms ' + ease + ', transform 460ms ' + ease,
+      };
+      return {
+        href: comingSoon ? undefined : (hrefById[p.id] || ('Project.dc.html?id=' + p.id)),
+        comingSoon,
+        slotId: 'proj-' + p.id,
+        slotSrc: srcById[p.id] || '',
+        slotBg: bgById[p.id] || 'transparent',
+        num: String(i + 1).padStart(2, '0'),
+        title: p.title,
+        sub: p.sub,
+        cat: p.cat,
+        year: p.year,
+        division: p.division === 'Livery' ? 'Livery' : 'Studio',
+        cta: comingSoon ? 'Coming soon' : (p.hasCaseStudy ? 'Open case study' : 'View project'),
+        onEnter: () => this.setState({ hovered: i }),
+        panelStyle,
+        revealStyle,
+      };
+    });
+
+    return { panels };
+  }
+}
+</script>
+</body>
+</html>
