@@ -3,25 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-68Z0WQS0DZ');
-</script>
-
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "y0db6g86r2");
-</script>
-
 <script src="./support.js"></script>
 </head>
 <body>
@@ -65,6 +46,11 @@
     .gl-menu-btn:hover .bar{background:var(--gl-cream);}
     .gl-menu-btn:hover .circle{width:120px;height:120px;opacity:1;}
     .gl-menu-btn:active{scale:0.95;box-shadow:0 0 0 3px var(--gl-ink-9);}
+    /* ===== Mobile optimization ===== */
+    @media (max-width:600px){
+      .gl-hdr{padding:14px 18px!important;}
+      .gl-hdr .animated-button{display:none!important;}
+    }
   </style>
 </helmet>
 

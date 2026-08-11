@@ -3,25 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-68Z0WQS0DZ');
-</script>
-
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "y0db6g86r2");
-</script>
-
 <script src="./support.js"></script>
 </head>
 <body>
@@ -36,6 +17,22 @@
   <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/motion.css">
   <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/styles.css">
   <script src="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/_ds_bundle.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-68Z0WQS0DZ');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "y0db6g86r2");
+  </script>
   <script src="./image-slot.js"></script>
   <style>
     *{box-sizing:border-box;}
@@ -44,6 +41,19 @@
     a{color:var(--text-primary);text-decoration:none;}
     a:hover{color:var(--text-secondary);}
     ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
+    /* ===== Mobile optimization ===== */
+    @media (max-width:768px){
+      main [style*="px 40px"], main [style*="0 40px"]{padding-left:24px!important;padding-right:24px!important;}
+      main h1{font-size:clamp(32px,8vw,56px)!important;line-height:1.06!important;}
+      main h2{font-size:clamp(26px,6vw,40px)!important;line-height:1.12!important;}
+    }
+    @media (max-width:640px){
+      main [style*="grid-template-columns"]{grid-template-columns:1fr!important;}
+      main [style*="px 40px"], main [style*="0 40px"]{padding-left:18px!important;padding-right:18px!important;}
+      .gl-work-panels{height:auto!important;}
+      .gl-work-panels > a{flex:1 1 auto!important;min-height:340px!important;}
+      .gl-work-panels a h3 + div{max-height:none!important;opacity:1!important;transform:none!important;}
+    }
   </style>
 </helmet>
 
@@ -64,7 +74,7 @@
         <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Hover to open</span>
       </div>
 
-      <div style="display:flex;flex-direction:column;gap:8px;height:1200px;">
+      <div class="gl-work-panels" style="display:flex;flex-direction:column;gap:8px;height:1200px;">
         <sc-for list="{{ panels }}" as="p" hint-placeholder-count="3">
           <a href="{{ p.href }}" style="{{ p.panelStyle }}" onMouseEnter="{{ p.onEnter }}" onFocus="{{ p.onEnter }}">
             <image-slot id="{{ p.slotId }}" src="{{ p.slotSrc }}" fit="cover" radius="16" placeholder="Drop project image" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;background:{{ p.slotBg }};"></image-slot>
@@ -116,7 +126,7 @@ class Component extends DCLogic {
       'cross-county': 'Coors Banq. 410.dc.html', 'marrow-bakery': 'Andes - Next Gen Toyota Camry.dc.html', 'circle-k': 'Circle K - ARCA Chevrolet.dc.html',
     };
     const bgById = { panacea: '#2f5a3c' };
-    const srcById = { 'marrow-bakery': './04-001-19a-msmi1pa0-uwgv.webp' };
+    const srcById = { 'marrow-bakery': 'assets/case-studies/04-001-19a-msmi1pa0-uwgv.webp', panacea: 'assets/case-studies/proj-panacea.webp', ashworth: 'assets/case-studies/proj-ashworth.webp', k1: 'assets/case-studies/proj-k1.webp', 'cross-county': 'assets/case-studies/proj-cross-county.webp', 'circle-k': 'assets/case-studies/proj-circle-k.webp' };
     const projects = this.state.projects;
     const hovered = this.state.hovered;
     const ease = 'cubic-bezier(0.22,0.61,0.36,1)';

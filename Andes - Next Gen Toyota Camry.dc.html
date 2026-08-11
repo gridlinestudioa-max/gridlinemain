@@ -3,25 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-68Z0WQS0DZ');
-</script>
-
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "y0db6g86r2");
-</script>
-
 <script src="./support.js"></script>
 </head>
 <body>
@@ -36,6 +17,22 @@
   <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/motion.css">
   <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/styles.css">
   <script src="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/_ds_bundle.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-68Z0WQS0DZ');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "y0db6g86r2");
+  </script>
   <script src="image-slot.js"></script>
   <style>
     *{box-sizing:border-box;}
@@ -45,6 +42,16 @@
     a:hover{color:var(--text-secondary);}
     image-slot{display:block;width:100%;height:100%;}
     ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
+    /* ===== Mobile optimization ===== */
+    @media (max-width:768px){
+      main [style*="px 40px"], main [style*="0 40px"]{padding-left:24px!important;padding-right:24px!important;}
+      main h1{font-size:clamp(32px,8vw,56px)!important;line-height:1.06!important;}
+      main h2{font-size:clamp(26px,6vw,40px)!important;line-height:1.12!important;}
+    }
+    @media (max-width:640px){
+      main [style*="grid-template-columns"]{grid-template-columns:1fr!important;}
+      main [style*="px 40px"], main [style*="0 40px"]{padding-left:18px!important;padding-right:18px!important;}
+    }
   </style>
 </helmet>
 
@@ -81,13 +88,13 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
         <div>
           <div style="position:relative;aspect-ratio:5/4;overflow:hidden;border:1px solid var(--border-strong);">
-            <image-slot id="pd-hero-andes-1" shape="rect" fit="contain" placeholder="Andes — drop image 1" src="./04-001-19a-msmi1pa0-uwgv.webp"></image-slot>
+            <image-slot id="pd-hero-andes-1" shape="rect" fit="contain" placeholder="Andes — drop image 1" src="assets/case-studies/04-001-19a-msmi1pa0-uwgv.webp"></image-slot>
           </div>
           <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;text-align:center;">Front</div>
         </div>
         <div>
           <div style="position:relative;aspect-ratio:5/4;overflow:hidden;border:1px solid var(--border-strong);">
-            <image-slot id="pd-hero-andes-2" shape="rect" fit="contain" placeholder="Andes — drop image 2" src="./04-001-20a-msmi1tmr-2zk1.webp"></image-slot>
+            <image-slot id="pd-hero-andes-2" shape="rect" fit="contain" placeholder="Andes — drop image 2" src="assets/case-studies/04-001-20a-msmi1tmr-2zk1.webp"></image-slot>
           </div>
           <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;text-align:center;">Rear</div>
         </div>
@@ -97,7 +104,7 @@
     <section style="max-width:1200px;margin:0 auto;padding:72px 40px 0;">
       
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
-        <image-slot id="pd-vector-andes" shape="rect" fit="contain" placeholder="Print-ready vector file — drop image" src="./04-001-23A.webp"></image-slot>
+        <image-slot id="pd-vector-andes" shape="rect" fit="contain" placeholder="Print-ready vector file — drop image" src="assets/case-studies/04-001-23A.webp"></image-slot>
       </div>
       <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;text-align:center;">Print File</div>
     </section>

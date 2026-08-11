@@ -3,25 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-68Z0WQS0DZ');
-</script>
-
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "y0db6g86r2");
-</script>
-
 <script src="./support.js"></script>
 </head>
 <body>
@@ -36,6 +17,22 @@
   <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/motion.css">
   <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/styles.css">
   <script src="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/_ds_bundle.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-68Z0WQS0DZ');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "y0db6g86r2");
+  </script>
   <script src="image-slot.js"></script>
   <style>
     *{box-sizing:border-box;}
@@ -80,6 +77,20 @@
     .tier-link:hover span.tier-pattern{transform:translateX(0);}
     .tier-link > span:not(.tier-pattern){position:relative;z-index:1;transition:transform 0.55s cubic-bezier(0.23,1,0.32,1);}
     .tier-link:hover > span:not(.tier-pattern){transform:translateX(10px);}
+    /* ===== Mobile optimization ===== */
+    @media (max-width:768px){
+      main [style*="px 40px"], main [style*="0 40px"]{padding-left:24px!important;padding-right:24px!important;}
+      main h1{font-size:clamp(32px,8vw,56px)!important;line-height:1.06!important;}
+      main h2{font-size:clamp(26px,6vw,40px)!important;line-height:1.12!important;}
+    }
+    @media (max-width:640px){
+      main [style*="grid-template-columns"]{grid-template-columns:1fr!important;}
+      main [style*="px 40px"], main [style*="0 40px"]{padding-left:18px!important;padding-right:18px!important;}
+      .work-card{flex-direction:column;height:auto!important;}
+      .work-card a{flex:none!important;height:150px!important;}
+      .work-card a:hover{flex:none!important;}
+      .work-card a span{transform:rotate(0)!important;min-width:0!important;font-size:20px!important;}
+    }
   </style>
 </helmet>
 
@@ -118,9 +129,9 @@
       </div>
 
       <div class="work-card">
-        <a href="Panacea Junkiez.dc.html"><image-slot id="home-work-panacea" shape="rect" fit="cover" placeholder="Panacea Junkiez — drop image"></image-slot><span>Panacea Junkiez</span></a>
-        <a href="Ashworth.dc.html"><image-slot id="home-work-ashworth" shape="rect" fit="cover" placeholder="Ashworth — drop image"></image-slot><span>Ashworth</span></a>
-        <a href="Circle K - ARCA Chevrolet.dc.html"><image-slot id="home-work-arca" shape="rect" fit="cover" placeholder="ARCA Chevrolet — drop image"></image-slot><span>ARCA Chevrolet</span></a>
+        <a href="Panacea Junkiez.dc.html"><image-slot id="home-work-panacea" src="assets/case-studies/home-work-panacea.webp" shape="rect" fit="cover" placeholder="Panacea Junkiez — drop image"></image-slot><span>Panacea Junkiez</span></a>
+        <a href="Ashworth.dc.html"><image-slot id="home-work-ashworth" src="assets/case-studies/home-work-ashworth.webp" shape="rect" fit="cover" placeholder="Ashworth — drop image"></image-slot><span>Ashworth</span></a>
+        <a href="Circle K - ARCA Chevrolet.dc.html"><image-slot id="home-work-arca" src="assets/case-studies/home-work-arca.webp" shape="rect" fit="cover" placeholder="ARCA Chevrolet — drop image"></image-slot><span>ARCA Chevrolet</span></a>
       </div>
     </section>
 
