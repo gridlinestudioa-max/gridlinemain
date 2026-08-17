@@ -33,15 +33,12 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "y0db6g86r2");
   </script>
-  <script src="image-slot.js"></script>
   <style>
     *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    html{scroll-behavior:smooth;overflow-x:clip;}
+    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100%;}
     a{color:var(--text-primary);text-decoration:none;}
-    a:hover{color:var(--text-secondary);}
-    image-slot{display:block;width:100%;height:100%;}
-    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
+    a:hover{color:var(--text-secondary);}    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
     /* ===== Mobile optimization ===== */
     @media (max-width:768px){
       main [style*="px 40px"], main [style*="0 40px"]{padding-left:24px!important;padding-right:24px!important;}
@@ -87,31 +84,24 @@
 
     <section style="max-width:1200px;margin:0 auto;padding:8px 40px 0;">
       <div style="position:relative;aspect-ratio:5/2;overflow:hidden;border:1px solid transparent;">
-        <image-slot id="pd-hero-circlek" shape="rect" fit="contain" placeholder="Circle K — drop hero image" src="assets/case-studies/04-002-37A.webp"></image-slot>
+        <img id="pd-hero-circlek" src="assets/case-studies/04-002-hero.png" alt="Circle K #17 ARCA Menards Chevrolet livery, driver side" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
       </div>
+      <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;text-align:center;">Left side</div>
     </section>
 
     <section style="max-width:1200px;margin:0 auto;padding:24px 40px 0;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
-        <div>
-          <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid transparent;">
-            <image-slot id="pd-front-circlek" shape="rect" fit="contain" placeholder="Circle K — drop front image" src="assets/case-studies/04-002-35A.webp"></image-slot>
-          </div>
-          <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;text-align:center;">Front</div>
+      <div style="max-width:720px;margin:0 auto;">
+        <div style="position:relative;aspect-ratio:9/10;overflow:hidden;border:1px solid transparent;">
+          <img id="pd-front-circlek" src="assets/case-studies/04-002-front.png" alt="Circle K #17 ARCA Menards Chevrolet livery, front three-quarter view" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
         </div>
-        <div>
-          <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid transparent;">
-            <image-slot id="pd-rear-circlek" shape="rect" fit="contain" placeholder="Circle K — drop rear image" src="assets/case-studies/04-002-36A.webp"></image-slot>
-          </div>
-          <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;text-align:center;">Rear</div>
-        </div>
+        <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;text-align:center;">Front</div>
       </div>
     </section>
 
     <section style="max-width:1000px;margin:0 auto;padding:40px 40px 0;">
       <div style="max-width:520px;margin:0 auto;">
         <div style="position:relative;aspect-ratio:1/1;overflow:hidden;border:1px solid transparent;">
-          <image-slot id="pd-poster-circlek" shape="rect" fit="contain" placeholder="Circle K — drop poster" src="assets/case-studies/04-002-51A.webp"></image-slot>
+          <img id="pd-poster-circlek" src="assets/case-studies/04-002-poster.png" alt="Circle K #17 ARCA Menards Chevrolet livery poster" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
         </div>
         <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;text-align:center;">Poster</div>
       </div>

@@ -36,8 +36,8 @@
   <script src="./image-slot.js"></script>
   <style>
     *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    html{scroll-behavior:smooth;overflow-x:clip;}
+    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100%;}
     a{color:var(--text-primary);text-decoration:none;}
     a:hover{color:var(--text-secondary);}
     ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
@@ -77,7 +77,7 @@
       <div class="gl-work-panels" style="display:flex;flex-direction:column;gap:8px;height:1200px;">
         <sc-for list="{{ panels }}" as="p" hint-placeholder-count="3">
           <a href="{{ p.href }}" style="{{ p.panelStyle }}" onMouseEnter="{{ p.onEnter }}" onFocus="{{ p.onEnter }}">
-            <image-slot id="{{ p.slotId }}" src="{{ p.slotSrc }}" fit="cover" radius="16" placeholder="Drop project image" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;background:{{ p.slotBg }};"></image-slot>
+            <img id="{{ p.slotId }}" src="{{ p.slotSrc }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;z-index:0;">
             <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(8,7,12,0.18) 0%,rgba(8,7,12,0.34) 46%,rgba(8,7,12,0.82) 100%);"></div>
             <sc-if value="{{ p.comingSoon }}" hint-placeholder-val="{{ false }}">
               <div style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;pointer-events:none;">
@@ -126,7 +126,7 @@ class Component extends DCLogic {
       'cross-county': 'Coors Banq. 410.dc.html', 'marrow-bakery': 'Andes - Next Gen Toyota Camry.dc.html', 'circle-k': 'Circle K - ARCA Chevrolet.dc.html',
     };
     const bgById = { panacea: '#2f5a3c' };
-    const srcById = { 'marrow-bakery': 'assets/case-studies/04-001-19a-msmi1pa0-uwgv.webp', panacea: 'assets/case-studies/proj-panacea.webp', ashworth: 'assets/case-studies/proj-ashworth.webp', k1: 'assets/case-studies/proj-k1.webp', 'cross-county': 'assets/case-studies/proj-cross-county.webp', 'circle-k': 'assets/case-studies/proj-circle-k.webp' };
+    const srcById = { 'marrow-bakery': 'assets/case-studies/04-001-19a-msmi1pa0-uwgv.webp', panacea: 'assets/case-studies/proj-panacea.webp', ashworth: 'assets/case-studies/proj-ashworth.webp', k1: 'assets/case-studies/proj-k1.webp', 'cross-county': 'assets/case-studies/proj-cross-county.webp', 'circle-k': 'assets/case-studies/proj-circle-k.png' };
     const projects = this.state.projects;
     const hovered = this.state.hovered;
     const ease = 'cubic-bezier(0.22,0.61,0.36,1)';

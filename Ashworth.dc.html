@@ -33,17 +33,14 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "y0db6g86r2");
   </script>
-  <script src="image-slot.js"></script>
   <link rel="stylesheet" href="https://use.typekit.net/sbp2lmi.css">
   <link rel="stylesheet" href="https://use.typekit.net/mwf5zij.css">
   <style>
     *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    html{scroll-behavior:smooth;overflow-x:clip;}
+    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100%;}
     a{color:var(--text-primary);text-decoration:none;}
-    a:hover{color:var(--text-secondary);}
-    image-slot{display:block;width:100%;height:100%;}
-    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
+    a:hover{color:var(--text-secondary);}    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
     /* ===== Mobile optimization ===== */
     @media (max-width:768px){
       main [style*="px 40px"], main [style*="0 40px"]{padding-left:24px!important;padding-right:24px!important;}
@@ -88,7 +85,7 @@
 
     <section style="max-width:1200px;margin:0 auto;padding:0 40px 24px;">
       <div style="position:relative;aspect-ratio:5/2;overflow:hidden;">
-        <image-slot id="pd-hero-ashworth" src="assets/case-studies/pd-hero-ashworth.svg" shape="rect" fit="contain" placeholder="Ashworth — drop hero image"></image-slot>
+        <img id="pd-hero-ashworth" src="assets/case-studies/pd-hero-ashworth.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
       </div>
     </section>
 
@@ -111,13 +108,13 @@
         <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
           <div>
             <div style="position:relative;aspect-ratio:4/3;overflow:hidden;">
-              <image-slot id="pd-del-ashworth-trestle" src="assets/case-studies/pd-del-ashworth-trestle.svg" shape="rect" fit="contain" placeholder="Trestle icon"></image-slot>
+              <img id="pd-del-ashworth-trestle" src="assets/case-studies/pd-del-ashworth-trestle.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
             </div>
             <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:12px;">Trestle icon</div>
           </div>
           <div>
-            <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--gl-ink-9);">
-              <image-slot id="pd-del-ashworth-mono" src="assets/case-studies/pd-del-ashworth-mono.svg" shape="rect" fit="contain" placeholder="A-truss monogram, reversed"></image-slot>
+            <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:#A4562F;">
+              <img id="pd-del-ashworth-mono" src="assets/case-studies/pd-del-ashworth-mono.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
             </div>
             <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:12px;">A-truss monogram — reversed</div>
           </div>
@@ -180,13 +177,13 @@
         <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:24px;">
           <div>
             <div style="position:relative;aspect-ratio:4/5;overflow:hidden;">
-              <image-slot id="pd-del-ashworth-signage" src="assets/case-studies/pd-del-ashworth-signage.webp" shape="rect" fit="cover" placeholder="Storefront / signage concept"></image-slot>
+              <img id="pd-del-ashworth-signage" src="assets/case-studies/pd-del-ashworth-signage.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
             </div>
             <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:12px;">Signage concept</div>
           </div>
           <div>
             <div style="position:relative;aspect-ratio:4/5;overflow:hidden;padding:24px;">
-              <image-slot id="pd-del-ashworth-stationery" src="assets/case-studies/pd-del-ashworth-stationery.webp" shape="rect" fit="contain" placeholder="Stationery set — cards, tags, letterhead"></image-slot>
+              <img id="pd-del-ashworth-stationery" src="assets/case-studies/pd-del-ashworth-stationery.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
             </div>
             <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:12px;">Stationery set</div>
           </div>
@@ -201,16 +198,16 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
           <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-mock1" src="assets/case-studies/pd-del-ashworth-mock1.webp" shape="rect" fit="cover" placeholder="Mockup 1 — tee"></image-slot>
+            <img id="pd-del-ashworth-mock1" src="assets/case-studies/pd-del-ashworth-mock1.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-mock2" src="assets/case-studies/pd-del-ashworth-mock2.webp" shape="rect" fit="cover" placeholder="Mockup 2 — hoodie"></image-slot>
+            <img id="pd-del-ashworth-mock2" src="assets/case-studies/pd-del-ashworth-mock2.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-mock3" src="assets/case-studies/pd-del-ashworth-mock3.webp" shape="rect" fit="cover" placeholder="Mockup 3 — hang tag"></image-slot>
+            <img id="pd-del-ashworth-mock3" src="assets/case-studies/pd-del-ashworth-mock3.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-mock4" src="assets/case-studies/pd-del-ashworth-mock4.webp" shape="rect" fit="cover" placeholder="Mockup 4 — cap"></image-slot>
+            <img id="pd-del-ashworth-mock4" src="assets/case-studies/pd-del-ashworth-mock4.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
         </div>
         <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:16px;">4 branded mockups</div>
@@ -225,25 +222,25 @@
         <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Instagram — 1:1 posts</div>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px;">
           <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-ig1" src="assets/case-studies/pd-del-ashworth-ig1.webp" shape="rect" fit="cover" placeholder="IG post 1"></image-slot>
+            <img id="pd-del-ashworth-ig1" src="assets/case-studies/pd-del-ashworth-ig1.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-ig2" src="assets/case-studies/pd-del-ashworth-ig2.webp" shape="rect" fit="cover" placeholder="IG post 2"></image-slot>
+            <img id="pd-del-ashworth-ig2" src="assets/case-studies/pd-del-ashworth-ig2.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-ig3" src="assets/case-studies/pd-del-ashworth-ig3.webp" shape="rect" fit="cover" placeholder="IG post 3"></image-slot>
+            <img id="pd-del-ashworth-ig3" src="assets/case-studies/pd-del-ashworth-ig3.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="position:relative;aspect-ratio:1/1;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-ig4" src="assets/case-studies/pd-del-ashworth-ig4.webp" shape="rect" fit="cover" placeholder="IG post 4"></image-slot>
+            <img id="pd-del-ashworth-ig4" src="assets/case-studies/pd-del-ashworth-ig4.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
         </div>
         <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Instagram — 9:16 stories</div>
         <div style="display:grid;grid-template-columns:repeat(2,calc((100% - 32px)/3));gap:16px;justify-content:center;">
           <div style="position:relative;aspect-ratio:9/16;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-story1" src="assets/case-studies/pd-del-ashworth-story1.webp" shape="rect" fit="cover" placeholder="Story 1"></image-slot>
+            <img id="pd-del-ashworth-story1" src="assets/case-studies/pd-del-ashworth-story1.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="position:relative;aspect-ratio:9/16;overflow:hidden;">
-            <image-slot id="pd-del-ashworth-story2" src="assets/case-studies/pd-del-ashworth-story2.webp" shape="rect" fit="cover" placeholder="Story 2"></image-slot>
+            <img id="pd-del-ashworth-story2" src="assets/case-studies/pd-del-ashworth-story2.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
         </div>
         <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:16px;">6 templates — 4 feed posts &amp; 2 stories</div>

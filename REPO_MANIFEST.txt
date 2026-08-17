@@ -1,0 +1,127 @@
+REPO MANIFEST — files that should be on GitHub
+
+== ROOT (22) ==
+.nojekyll
+.thumbnail
+About.dc.html
+Andes - Next Gen Toyota Camry.dc.html
+Ashworth.dc.html
+CNAME
+Circle K - ARCA Chevrolet.dc.html
+Contact.dc.html
+Coors Banq. 410.dc.html
+Footer.dc.html
+Header.dc.html
+Home.dc.html
+Panacea Junkiez.dc.html
+Services.dc.html
+Work.dc.html
+_ds/   (entire design-system folder — upload as one directory)
+case-study-page-prompt.md
+image-slot.js
+index.html
+site-data.js
+sitemap.xml
+support.js
+
+== assets/ ==
+assets/panacea-before-logo.jpg
+
+== assets/case-studies/ (44) ==
+assets/case-studies/04-001-19a-msmi1pa0-uwgv.webp
+assets/case-studies/04-001-20a-msmi1tmr-2zk1.webp
+assets/case-studies/04-001-23A.webp
+assets/case-studies/04-002-35A.webp
+assets/case-studies/04-002-36A.webp
+assets/case-studies/04-002-37A.webp
+assets/case-studies/04-002-51A.webp
+assets/case-studies/about-studio.webp
+assets/case-studies/coors-slide-1.webp
+assets/case-studies/coors-slide-2.webp
+assets/case-studies/coors-slide-3.webp
+assets/case-studies/coors-slide-4.webp
+assets/case-studies/home-work-arca.webp
+assets/case-studies/home-work-ashworth.webp
+assets/case-studies/home-work-panacea.webp
+assets/case-studies/pd-del-ashworth-ig1.webp
+assets/case-studies/pd-del-ashworth-ig2.webp
+assets/case-studies/pd-del-ashworth-ig3.webp
+assets/case-studies/pd-del-ashworth-ig4.webp
+assets/case-studies/pd-del-ashworth-mock1.webp
+assets/case-studies/pd-del-ashworth-mock2.webp
+assets/case-studies/pd-del-ashworth-mock3.webp
+assets/case-studies/pd-del-ashworth-mock4.webp
+assets/case-studies/pd-del-ashworth-mono.svg
+assets/case-studies/pd-del-ashworth-signage.webp
+assets/case-studies/pd-del-ashworth-stationery.webp
+assets/case-studies/pd-del-ashworth-story1.webp
+assets/case-studies/pd-del-ashworth-story2.webp
+assets/case-studies/pd-del-ashworth-trestle.svg
+assets/case-studies/pd-del-logo-var1.svg
+assets/case-studies/pd-del-logo-var2.svg
+assets/case-studies/pd-gal-cross-county-2.webp
+assets/case-studies/pd-gal-cross-county-3.webp
+assets/case-studies/pd-hero-ashworth.svg
+assets/case-studies/pd-hero-panacea.svg
+assets/case-studies/proj-ashworth.webp
+assets/case-studies/proj-circle-k.webp
+assets/case-studies/proj-cross-county.webp
+assets/case-studies/proj-k1.webp
+assets/case-studies/proj-panacea.webp
+assets/case-studies/team-guide.webp
+assets/case-studies/team-logo.svg
+assets/case-studies/team-mockups.webp
+assets/case-studies/team-social.webp
+
+== assets/icons/ (6) ==
+assets/icons/framer.png
+assets/icons/illustrator.png
+assets/icons/indesign.png
+assets/icons/photoshop.png
+assets/icons/rhino.png
+assets/icons/twinmotion.png
+
+== assets/logos/ (6) ==
+assets/logos/combination-black.png
+assets/logos/combination-cream.png
+assets/logos/gs-mark-hover.png
+assets/logos/lettermark-gs.png
+assets/logos/mark-black.png
+assets/logos/mark-cream.png
+
+== uploads/ (25) ==
+uploads/02-001-08A.png
+uploads/04-001-23A.png
+uploads/04-002-35A.png
+uploads/04-002-36A.png
+uploads/04-002-37A.png
+uploads/04-002-51A.png
+uploads/04-004-12A-2db3b8d5.webp
+uploads/04-004-12A.png
+uploads/252522.jpg
+uploads/5968522-2f7963be.png
+uploads/5968522.png
+uploads/5968535-bc58f925.png
+uploads/5968535.png
+uploads/5968572-e71c8f66.png
+uploads/5968572.png
+uploads/Gridline Studio Business Plan v6.docx
+uploads/Gridline Studio Business Plan v6.pdf
+uploads/Screenshot 2026-08-09 213755.png
+uploads/images (2)-81d91861.png
+uploads/images (2).png
+uploads/images (3)-a145ce58.png
+uploads/images (3).png
+uploads/images (4)-e3171464.png
+uploads/images (4).png
+uploads/pasted-1783621786078-0.png
+
+== MUST DELETE from repo (web upload cannot remove these) ==
+04-001-19a-msmi1pa0-uwgv.webp
+04-001-20a-msmi1tmr-2zk1.webp
+04-001-23A.webp
+04-002-35A.webp
+04-002-36A.webp
+04-002-37A.webp
+04-002-51A.webp
+.image-slots.state.json

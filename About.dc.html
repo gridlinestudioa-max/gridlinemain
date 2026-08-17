@@ -33,15 +33,12 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "y0db6g86r2");
   </script>
-  <script src="image-slot.js"></script>
   <style>
     *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    html{scroll-behavior:smooth;overflow-x:clip;}
+    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100%;}
     a{color:var(--text-primary);text-decoration:none;}
-    a:hover{color:var(--text-secondary);}
-    image-slot{display:block;width:100%;height:100%;}
-    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
+    a:hover{color:var(--text-secondary);}    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
     .gl-flip{perspective:1400px;}
     .gl-flip-inner{position:relative;width:100%;height:100%;transition:transform 600ms cubic-bezier(0.22,0.61,0.36,1);transform-style:preserve-3d;}
     .gl-flip:hover .gl-flip-inner{transform:rotateY(180deg);}
@@ -102,7 +99,7 @@
         <div class="gl-flip" style="position:relative;width:520px;max-width:100%;aspect-ratio:1/1;overflow:hidden;border:1px solid var(--border-strong);">
           <div class="gl-flip-inner">
             <div class="gl-flip-face">
-              <image-slot id="about-studio" src="assets/case-studies/about-studio.webp" shape="rect" fit="cover" placeholder="Drop a studio / founder photo"></image-slot>
+              <img id="about-studio" src="assets/case-studies/about-studio.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
             </div>
             <div class="gl-flip-face gl-flip-back" style="justify-content:center;gap:0;padding:44px 56px;">
               <div style="max-width:760px;margin:0 auto;">
@@ -144,7 +141,7 @@
             <sc-for list="{{ team }}" as="m" hint-placeholder-count="4">
               <div style="flex:0 0 100%;min-width:0;display:flex;justify-content:center;">
                 <div style="position:relative;width:100%;max-width:820px;height:460px;overflow:hidden;background:transparent;border:none;">
-                  <image-slot id="team-{{ m.id }}" src="{{ m.src }}" shape="rect" fit="contain" placeholder="{{ m.n }}" style="background:transparent;"></image-slot>
+                  <img id="team-{{ m.id }}" src="{{ m.src }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
                 </div>
               </div>
             </sc-for>

@@ -33,17 +33,14 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "y0db6g86r2");
   </script>
-  <script src="image-slot.js"></script>
   <link rel="stylesheet" href="https://use.typekit.net/hvf8ong.css">
   <link rel="stylesheet" href="https://use.typekit.net/qok4jvw.css">
   <style>
     *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    html{scroll-behavior:smooth;overflow-x:clip;}
+    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100%;}
     a{color:var(--text-primary);text-decoration:none;}
-    a:hover{color:var(--text-secondary);}
-    image-slot{display:block;width:100%;height:100%;}
-    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
+    a:hover{color:var(--text-secondary);}    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
     /* ===== Mobile optimization ===== */
     @media (max-width:768px){
       main [style*="px 40px"], main [style*="0 40px"]{padding-left:24px!important;padding-right:24px!important;}
@@ -88,7 +85,7 @@
 
     <section style="max-width:1200px;margin:0 auto;padding:0 40px 24px;">
       <div style="position:relative;aspect-ratio:5/2;overflow:hidden;border:1px solid transparent;">
-        <image-slot id="pd-hero-panacea" src="assets/case-studies/pd-hero-panacea.svg" shape="rect" fit="contain" placeholder="Panacea Junkiez — drop hero image"></image-slot>
+        <img id="pd-hero-panacea" src="assets/case-studies/pd-hero-panacea.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
       </div>
     </section>
 
@@ -127,13 +124,13 @@
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
           <div>
             <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid transparent;">
-              <image-slot id="pd-del-logo-var1" src="assets/case-studies/pd-del-logo-var1.svg" shape="rect" fit="contain" placeholder="Variation 1"></image-slot>
+              <img id="pd-del-logo-var1" src="assets/case-studies/pd-del-logo-var1.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
             </div>
             <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:12px;">Variation 1</div>
           </div>
           <div>
             <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid transparent;background:var(--gl-ink-9);">
-              <image-slot id="pd-del-logo-var2" src="assets/case-studies/pd-del-logo-var2.svg" shape="rect" fit="contain" placeholder="Variation 2" style="padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px"></image-slot>
+              <img id="pd-del-logo-var2" src="assets/case-studies/pd-del-logo-var2.webp" alt="" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block;">
             </div>
             <div style="font-family:var(--font-body);font-weight:300;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);margin-top:12px;">Variation 2</div>
           </div>

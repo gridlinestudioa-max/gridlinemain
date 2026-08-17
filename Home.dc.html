@@ -33,15 +33,12 @@
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "y0db6g86r2");
   </script>
-  <script src="image-slot.js"></script>
   <style>
     *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    html{scroll-behavior:smooth;overflow-x:clip;}
+    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100%;}
     a{color:var(--text-primary);text-decoration:none;}
-    a:hover{color:var(--text-secondary);}
-    image-slot{display:block;width:100%;height:100%;}
-    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
+    a:hover{color:var(--text-secondary);}    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
     .gl-square-btn button:not(.animated-button), .gl-square-btn a{border-radius:0 !important;}
     select option{background-color:#08070C;color:#FFFCF3;}
     .gl-next-btn{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-family:var(--font-display);font-weight:500;font-size:15px;padding:10px 20px;border-radius:var(--radius-full);background:var(--gl-ink-9);color:var(--gl-cream);border:1px solid var(--gl-ink-9);transition:background .2s cubic-bezier(0.22,0.61,0.36,1),transform .12s ease;}
@@ -68,8 +65,7 @@
     .work-card{display:flex;width:100%;height:460px;gap:8px;}
     .work-card a{position:relative;flex:1;overflow:hidden;border-radius:16px;background:var(--gl-ink-9);border:1px solid var(--border-ink);display:flex;justify-content:center;align-items:center;transition:flex 0.55s cubic-bezier(0.22,0.61,0.36,1);text-decoration:none;}
     .work-card a:hover{flex:4;color:var(--gl-cream);}
-    .work-card a image-slot{position:absolute;inset:0;width:100%;height:100%;z-index:0;}
-    .work-card a::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,7,12,0.25),rgba(8,7,12,0.65));pointer-events:none;}
+    .work-card a    .work-card a::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,7,12,0.25),rgba(8,7,12,0.65));pointer-events:none;}
     .work-card a span{position:relative;z-index:2;min-width:16em;text-align:center;transform:rotate(-90deg);transition:transform 0.55s cubic-bezier(0.22,0.61,0.36,1);text-transform:uppercase;color:var(--gl-cream);letter-spacing:0.14em;font-family:var(--font-display);font-weight:600;font-size:28px;white-space:nowrap;}
     .work-card a:hover span{transform:rotate(0);}
     .tier-link{position:relative;overflow:hidden;}
@@ -129,9 +125,9 @@
       </div>
 
       <div class="work-card">
-        <a href="Panacea Junkiez.dc.html"><image-slot id="home-work-panacea" src="assets/case-studies/home-work-panacea.webp" shape="rect" fit="cover" placeholder="Panacea Junkiez — drop image"></image-slot><span>Panacea Junkiez</span></a>
-        <a href="Ashworth.dc.html"><image-slot id="home-work-ashworth" src="assets/case-studies/home-work-ashworth.webp" shape="rect" fit="cover" placeholder="Ashworth — drop image"></image-slot><span>Ashworth</span></a>
-        <a href="Circle K - ARCA Chevrolet.dc.html"><image-slot id="home-work-arca" src="assets/case-studies/home-work-arca.webp" shape="rect" fit="cover" placeholder="ARCA Chevrolet — drop image"></image-slot><span>ARCA Chevrolet</span></a>
+        <a href="Panacea Junkiez.dc.html"><img id="home-work-panacea" src="assets/case-studies/home-work-panacea.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"><span>Panacea Junkiez</span></a>
+        <a href="Ashworth.dc.html"><img id="home-work-ashworth" src="assets/case-studies/home-work-ashworth.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"><span>Ashworth</span></a>
+        <a href="Circle K - ARCA Chevrolet.dc.html"><img id="home-work-arca" src="assets/case-studies/home-work-arca.png" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"><span>ARCA Chevrolet</span></a>
       </div>
     </section>
 
