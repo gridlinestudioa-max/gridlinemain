@@ -8,101 +8,140 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/radius.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/shadow.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/motion.css">
   <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/styles.css">
+  <link rel="stylesheet" href="assets/site.css">
   <script src="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/_ds_bundle.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-68Z0WQS0DZ');
-  </script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "y0db6g86r2");
-  </script>
-  <script src="./image-slot.js"></script>
+  <script src="assets/analytics.js"></script>
   <style>
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;overflow-x:clip;}
-    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100%;}
-    a{color:var(--text-primary);text-decoration:none;}
-    a:hover{color:var(--text-secondary);}
-    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
-    /* ===== Mobile optimization ===== */
-    @media (max-width:768px){
-      main [style*="px 40px"], main [style*="0 40px"]{padding-left:24px!important;padding-right:24px!important;}
-      main h1{font-size:clamp(32px,8vw,56px)!important;line-height:1.06!important;}
-      main h2{font-size:clamp(26px,6vw,40px)!important;line-height:1.12!important;}
+    .wk-pad{padding-left:40px;padding-right:40px;}
+    .wk-filterbar{top:113px;}
+    @media (max-width:600px){.wk-filterbar{top:97px;}}
+    .wk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px 24px;}
+    @media (max-width:820px){
+      .wk-pad{padding-left:24px;padding-right:24px;}
+      .wk-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px 16px;}
     }
-    @media (max-width:640px){
-      main [style*="grid-template-columns"]{grid-template-columns:1fr!important;}
-      main [style*="px 40px"], main [style*="0 40px"]{padding-left:18px!important;padding-right:18px!important;}
-      .gl-work-panels{height:auto!important;}
-      .gl-work-panels > a{flex:1 1 auto!important;min-height:340px!important;}
-      .gl-work-panels a h3 + div{max-height:none!important;opacity:1!important;transform:none!important;}
+    @keyframes wk-scrim-in{from{opacity:0;}to{opacity:1;}}
+    @keyframes wk-pop-in{from{opacity:0;transform:scale(0.94) translateY(10px);}to{opacity:1;transform:scale(1) translateY(0);}}
+    @media (max-width:520px){
+      .wk-grid{grid-template-columns:1fr;gap:20px;}
+      .wk-filters{overflow-x:auto;flex-wrap:nowrap!important;-webkit-overflow-scrolling:touch;}
+      .wk-filters > *{flex:0 0 auto;}
     }
   </style>
 </helmet>
 
 <div style="min-height:100vh;background:var(--surface-page);color:var(--text-primary);">
 
-  <dc-import name="Header" hint-size="100%,105px"></dc-import>
+  <dc-import name="Header" hint-size="100%,105px" style="position:sticky;top:0;z-index:90;"></dc-import>
 
   <main data-screen-label="Work">
-    <section style="max-width:1200px;margin:0 auto;padding:64px 40px 40px;">
-      <div style="font-family:var(--font-mono);font-weight:400;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);">Portfolio — 2026</div>
-      <h1 style="font-family:var(--font-display);font-weight:600;font-size:72px;line-height:1.02;letter-spacing:-0.035em;margin:24px 0 0;max-width:900px;text-wrap:balance;">Rebrands,<br>from juice bar to gym.</h1>
-      <p style="font-family:var(--font-body);font-weight:300;font-size:19px;line-height:1.6;color:var(--text-secondary);max-width:600px;margin:28px 0 0;">A selection of rebrands for small businesses and independent brands. Hover a panel to open it, then click through to the full project behind each identity.</p>
+
+    <section class="wk-pad" style="max-width:1200px;margin:0 auto;padding-top:64px;padding-bottom:36px;">
+      <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);">Work — by service</div>
+      <h1 style="font-family:var(--font-display);font-weight:600;font-size:clamp(38px,7vw,72px);line-height:1.02;letter-spacing:-0.035em;margin:24px 0 0;max-width:900px;text-wrap:balance;">See the piece before you commission it.</h1>
+      <p style="font-family:var(--font-body);font-weight:300;font-size:clamp(16px,2.2vw,19px);line-height:1.6;color:var(--text-secondary);max-width:600px;margin:26px 0 0;">Every service we offer, shown as work. Pick a piece to see how it is built, what you receive, and where it has been used.</p>
     </section>
 
-    <section style="max-width:1200px;margin:0 auto;padding:0 40px 112px;">
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;border-top:1px solid var(--border-ink);padding-top:24px;margin-bottom:28px;">
-        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);">Selected work</span>
-        <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Hover to open</span>
+    <section class="wk-filterbar" style="position:sticky;z-index:20;background:var(--surface-page);">
+      <div class="wk-pad" style="max-width:1200px;margin:0 auto;padding-bottom:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid var(--border-ink);padding-top:16px;padding-bottom:16px;flex-wrap:wrap;">
+          <div class="wk-filters" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+              <button type="button" onClick="{{ f.onClick }}" style="{{ f.style }}">{{ f.label }}</button>
+            </sc-for>
+          </div>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">{{ countLabel }}</span>
+        </div>
       </div>
+    </section>
 
-      <div class="gl-work-panels" style="display:flex;flex-direction:column;gap:8px;height:1200px;">
-        <sc-for list="{{ panels }}" as="p" hint-placeholder-count="3">
-          <a href="{{ p.href }}" style="{{ p.panelStyle }}" onMouseEnter="{{ p.onEnter }}" onFocus="{{ p.onEnter }}">
-            <img id="{{ p.slotId }}" src="{{ p.slotSrc }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;z-index:0;">
-            <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(8,7,12,0.18) 0%,rgba(8,7,12,0.34) 46%,rgba(8,7,12,0.82) 100%);"></div>
-            <sc-if value="{{ p.comingSoon }}" hint-placeholder-val="{{ false }}">
-              <div style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;pointer-events:none;">
-                <span style="font-family:var(--font-mono);font-weight:400;font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gl-cream);border:1px solid rgba(255,252,243,0.5);border-radius:var(--radius-full,999px);padding:12px 26px;background:rgba(8,7,12,0.4);backdrop-filter:blur(2px);">Coming soon</span>
-              </div>
-            </sc-if>
-            <div style="position:absolute;top:26px;left:34px;right:34px;z-index:2;display:flex;align-items:center;justify-content:space-between;font-family:var(--font-mono);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gl-cream);">
-              <span style="opacity:0.55;">{{ p.num }}</span>
-              <span style="padding:5px 12px;border:1px solid rgba(255,252,243,0.4);border-radius:var(--radius-full,999px);color:var(--gl-cream);">{{ p.division }}</span>
+    <section class="wk-pad" style="max-width:1200px;margin:0 auto;padding-top:16px;padding-bottom:104px;">
+      <div class="wk-grid">
+        <sc-for list="{{ cards }}" as="c" hint-placeholder-count="8">
+          <div role="button" tabindex="0" onClick="{{ c.onOpen }}" onKeyDown="{{ c.onKey }}" style="display:flex;flex-direction:column;cursor:zoom-in;text-decoration:none;color:inherit;border:1px solid var(--border-default);border-radius:var(--radius-lg,16px);background:var(--surface-card);overflow:hidden;transition:transform 200ms cubic-bezier(0.22,0.61,0.36,1),border-color 200ms cubic-bezier(0.22,0.61,0.36,1),box-shadow 200ms cubic-bezier(0.22,0.61,0.36,1);" style-hover="transform:translateY(-2px);border-color:var(--border-ink);box-shadow:var(--shadow-md);">
+            <div style="position:relative;aspect-ratio:4 / 3;background:#FFFFFF;overflow:hidden;">
+              <sc-if value="{{ c.greyBg }}" hint-placeholder-val="{{ false }}">
+                <div style="position:absolute;inset:0;background:#F1EFEA;"></div>
+              </sc-if>
+              <sc-if value="{{ c.cover }}" hint-placeholder-val="{{ true }}">
+                <img src="{{ c.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+              </sc-if>
+              <sc-if value="{{ c.contain }}" hint-placeholder-val="{{ false }}">
+                <img src="{{ c.img }}" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;padding:22px;box-sizing:border-box;display:block;">
+              </sc-if>
+              <sc-if value="{{ c.needsArt }}" hint-placeholder-val="{{ false }}">
+                <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);">Coming soon</span>
+              </sc-if>
             </div>
-            <div style="position:relative;z-index:2;">
-              <h3 style="font-family:var(--font-display);font-weight:600;font-size:clamp(30px,3.4vw,46px);line-height:1.02;letter-spacing:-0.03em;margin:0;color:var(--gl-cream);">{{ p.title }}</h3>
-              <div style="{{ p.revealStyle }}">
-                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gl-cream);opacity:0.6;margin-top:16px;">{{ p.cat }} — {{ p.year }}</div>
-                <p style="font-family:var(--font-body);font-weight:300;font-size:17px;line-height:1.6;color:var(--gl-paper-4);margin:10px 0 0;max-width:560px;">{{ p.sub }}</p>
-                <span style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gl-cream);margin-top:22px;">
-                  {{ p.cta }}
-                  <svg width="26" height="10" viewBox="0 0 26 10" fill="none" style="display:block;"><path d="M0 5h24M20 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                </span>
-              </div>
+            <div style="display:flex;flex-direction:column;gap:8px;padding:18px 18px 20px;border-top:1px solid var(--border-subtle);">
+              <span style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);">{{ c.group }}</span>
+              <h2 style="font-family:var(--font-display);font-weight:600;font-size:19px;line-height:1.2;letter-spacing:-0.02em;margin:0;text-wrap:balance;">{{ c.title }}</h2>
+              <p style="font-family:var(--font-body);font-weight:300;font-size:14px;line-height:1.5;color:var(--text-secondary);margin:0;text-wrap:pretty;">{{ c.note }}</p>
             </div>
-          </a>
+          </div>
         </sc-for>
       </div>
     </section>
+
+    <sc-if value="{{ lightbox }}" hint-placeholder-val="{{ false }}">
+      <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:40px;background:rgba(8,7,12,0.82);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);animation:wk-scrim-in 180ms cubic-bezier(0.22,0.61,0.36,1);cursor:zoom-out;">
+        <div onClick="{{ stopClick }}" style="position:relative;display:flex;flex-direction:column;gap:18px;max-width:min(1100px,100%);max-height:100%;animation:wk-pop-in 260ms cubic-bezier(0.22,0.61,0.36,1);cursor:default;">
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+            <div>
+              <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gl-sand-3);">{{ lbGroup }}</div>
+              <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(24px,4vw,38px);line-height:1.05;letter-spacing:-0.03em;margin:10px 0 0;color:var(--gl-cream);">{{ lbTitle }}</h2>
+            </div>
+            <button type="button" onClick="{{ closeLightbox }}" style="display:flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gl-cream);background:transparent;border:1px solid rgba(255,252,243,0.4);border-radius:var(--radius-full,999px);padding:10px 16px;cursor:pointer;">Close
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+            </button>
+          </div>
+          {{ lbImgEl }}
+
+          <sc-if value="{{ lbIsCarousel }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <button type="button" onClick="{{ lbPrev }}" aria-label="Previous page" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,252,243,0.4);border-radius:var(--radius-full,999px);background:transparent;color:var(--gl-cream);cursor:pointer;transition:background 180ms cubic-bezier(0.22,0.61,0.36,1);" style-hover="background:rgba(255,252,243,0.12);">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M7.5 1.5L3 6l4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+                <button type="button" onClick="{{ lbNext }}" aria-label="Next page" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,252,243,0.4);border-radius:var(--radius-full,999px);background:transparent;color:var(--gl-cream);cursor:pointer;transition:background 180ms cubic-bezier(0.22,0.61,0.36,1);" style-hover="background:rgba(255,252,243,0.12);">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 1.5L9 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </button>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                <sc-for list="{{ lbThumbs }}" as="t" hint-placeholder-count="6">
+                  <button type="button" onClick="{{ t.onClick }}" aria-label="{{ t.label }}" style="{{ t.style }}">
+                    <img src="{{ t.img }}" alt="" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;">
+                  </button>
+                </sc-for>
+              </div>
+              <span style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gl-sand-3);margin-left:auto;white-space:nowrap;">{{ lbSlideLabel }}</span>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ lbNoImg }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;align-items:center;justify-content:center;width:min(900px,80vw);height:min(60vh,520px);border-radius:var(--radius-lg,16px);background:var(--gl-sand-2);background-image:linear-gradient(rgba(8,7,12,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(8,7,12,0.07) 1px,transparent 1px);background-size:32px 32px;font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Image to come</div>
+          </sc-if>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:16px;line-height:1.6;color:var(--gl-sand-3);margin:0;max-width:640px;">{{ lbNote }}</p>
+        </div>
+      </div>
+    </sc-if>
+
+    <section style="background:var(--surface-inverse);">
+      <div class="wk-pad" style="max-width:1200px;margin:0 auto;padding-top:80px;padding-bottom:80px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-inverse-secondary);">Pricing</div>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(28px,5vw,44px);line-height:1.04;letter-spacing:-0.03em;margin:16px 0 0;color:var(--text-inverse);">Every piece, priced on its own.</h2>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="Services.dc.html" style="text-decoration:none;display:inline-flex;align-items:center;height:48px;">
+            <x-import component-from-global-scope="GridlineStudioDesignSystem_62ae2b.Button" variant="inverse" size="lg" hint-size="auto,48px">See the price list</x-import>
+          </a>
+          <a href="Contact.dc.html" style="display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 24px;box-sizing:border-box;text-decoration:none;font-family:var(--font-body);font-weight:300;font-size:15px;letter-spacing:0.02em;color:var(--text-inverse);background:transparent;border:1px solid var(--border-inverse);border-radius:var(--radius-full,999px);transition:background 180ms cubic-bezier(0.22,0.61,0.36,1);" style-hover="background:rgba(255,252,243,0.08);">Start a project</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <dc-import name="Footer" hint-size="100%,420px"></dc-import>
@@ -111,72 +150,167 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { projects: [], hovered: 0 };
+  state = { filter: 'all', open: null, slide: 0 };
 
-  async componentDidMount() {
-    try {
-      const m = await import('./site-data.js');
-      this.setState({ projects: m.projects || [] });
-    } catch (e) { /* ignore */ }
+  componentDidMount() {
+    this._esc = (e) => {
+      if (e.key === 'Escape') { this.setState({ open: null }); return; }
+      if (!this.state.open) return;
+      if (e.key === 'ArrowRight') this.step(1);
+      if (e.key === 'ArrowLeft') this.step(-1);
+    };
+    window.addEventListener('keydown', this._esc);
+  }
+
+  step(d) {
+    const s = this.services().find((x) => x.title === this.state.open);
+    const n = s && s.slides ? s.slides.length : 0;
+    if (n < 2) return;
+    this.setState((st) => ({ slide: (st.slide + d + n) % n }));
+  }
+
+  componentWillUnmount() { window.removeEventListener('keydown', this._esc); }
+
+  services() {
+    return [
+      { g: 'identity', group: 'Identity', title: 'Logo Design (new mark)', note: 'Three directions drawn from scratch, narrowed to one locked mark.', img: 'assets/case-studies/logo-vestibule.webp', fit: 'contain' },
+      { g: 'identity', group: 'Identity', title: 'Logo Refresh', note: 'An existing mark rebuilt on the grid, equity kept intact.', img: 'assets/case-studies/logo-refresh-panacea.webp', fit: 'contain' },
+      { g: 'identity', group: 'Identity', title: 'Brand Guide Mini', note: 'Two to four pages: logo usage, color, type.', img: 'assets/case-studies/team-guide.webp', fit: 'contain' },
+      { g: 'identity', group: 'Identity', title: 'Brand Guide Full', note: 'Logo system, color, type, imagery direction, voice, applications. Shown: the full branding guide prepared for Ashworth, Little River, NC.', img: 'assets/brand-guide/ashworth-p01.png', fit: 'contain', slides: [
+        { img: 'assets/brand-guide/ashworth-p01.png', caption: 'Cover' },
+        { img: 'assets/brand-guide/ashworth-p02.png', caption: 'The brand' },
+        { img: 'assets/brand-guide/ashworth-p03.png', caption: 'The logo' },
+        { img: 'assets/brand-guide/ashworth-p04.png', caption: 'Logo usage' },
+        { img: 'assets/brand-guide/ashworth-p05.png', caption: 'Colors' },
+        { img: 'assets/brand-guide/ashworth-p06.png', caption: 'Type' },
+      ] },
+
+      { g: 'applications', group: 'Applications', title: 'Social Media Template Set', note: 'Editable post and story templates set on one platform. Shown: the Ashworth set.', img: 'assets/social/ashworth-social-grid.webp', fit: 'contain', slides: [
+        { img: 'assets/social/ashworth-social-grid.webp', caption: 'Brand grid post' },
+        { img: 'assets/social/ashworth-social-tote.webp', caption: 'Product post — tote' },
+        { img: 'assets/social/ashworth-social-storefront.webp', caption: 'Storefront post' },
+        { img: 'assets/social/ashworth-social-mark.webp', caption: 'Mark post' },
+        { img: 'assets/social/ashworth-social-hangtag.webp', caption: 'Detail post — hangtag' },
+      ] },
+      { g: 'applications', group: 'Applications', title: 'Signage Concept', note: 'Window, exterior, or interior, drawn to scale in place.', img: 'assets/case-studies/signage-vestibule.webp' },
+      { g: 'applications', group: 'Applications', title: 'Menu Design Concept', note: 'One concept, typeset for the room it is read in. Shown: the Buffalouie\'s menu.', img: 'assets/menu/bl-menu-back.png', fit: 'contain', slides: [
+        { img: 'assets/menu/bl-menu-back.png', caption: 'Salads, subs, sandwiches' },
+        { img: 'assets/menu/bl-menu-front.png', caption: 'Wings, sides, burgers' },
+      ] },
+      { g: 'applications', group: 'Applications', title: 'Business Card / Stationery Suite', note: 'Card plus letterhead or equivalent, print-ready. Shown: the Ashworth Apparel suite.', img: 'assets/stationery/ashworth-set.png', fit: 'contain', slides: [
+        { img: 'assets/stationery/ashworth-set.png', caption: 'The suite' },
+        { img: 'assets/stationery/ashworth-letterhead.png', caption: 'Letterhead' },
+        { img: 'assets/stationery/ashworth-card-front.png', caption: 'Business card — front' },
+        { img: 'assets/stationery/ashworth-card-name.png', caption: 'Business card — back' },
+        { img: 'assets/stationery/ashworth-card-apparel.png', caption: 'Business card — alternate' },
+        { img: 'assets/stationery/ashworth-envelope.png', caption: 'Envelope' },
+        { img: 'assets/stationery/ashworth-contact-page.png', caption: 'Contact page' },
+      ] },
+      { g: 'applications', group: 'Applications', title: 'Branded Mockup Package', note: 'Three mockups of the identity on real objects.', img: 'assets/case-studies/vestibule-pizza-box.png' },
+
+      { g: 'web', group: 'Web', title: 'Website Design', note: 'A mobile-responsive site built from your brand system.', img: '' },
+
+      { g: 'livery', group: 'Livery', title: 'Base Template Application', note: 'A livery applied to the sim car template, panel to panel.', img: 'assets/case-studies/livery-circle-k-3d.png' },
+      { g: 'livery', group: 'Livery', title: 'Sim-Ready Export (PSD/TGA)', note: 'Layered and flattened files prepped to load in-sim.', img: 'assets/case-studies/livery-coors-export.png', fit: 'contain' },
+      { g: 'livery', group: 'Livery', title: 'Panel-by-Panel Layout PDF', note: 'Production spec sheet: logo and number placement per panel.', img: '' },
+      { g: 'livery', group: 'Livery', title: 'Additional Colorway', note: 'A locked design recolored for a second car or season.', img: '' },
+      { g: 'livery', group: 'Livery', title: 'Poster / Social Template Set', note: 'Race-week collateral built off the finished livery. Shown: the Circle K 17 set.', img: 'assets/livery-social/ck-poster.png', fit: 'contain', slides: [
+        { img: 'assets/livery-social/ck-poster.png', caption: 'Race poster' },
+        { img: 'assets/livery-social/ck-social-1.png', caption: 'Reveal post' },
+        { img: 'assets/livery-social/ck-social-2.png', caption: 'Detail post — front' },
+        { img: 'assets/livery-social/ck-social-3.png', caption: 'Detail post — quarter panel' },
+        { img: 'assets/livery-social/ck-social-4.png', caption: 'Sponsor card' },
+      ] },
+    ];
   }
 
   renderVals() {
-    const hrefById = {
-      panacea: 'Panacea Junkiez.dc.html', ashworth: 'Ashworth.dc.html', k1: 'K1 Fitness.dc.html',
-      'cross-county': 'Coors Banq. 410.dc.html', 'marrow-bakery': 'Andes - Next Gen Toyota Camry.dc.html', 'circle-k': 'Circle K - ARCA Chevrolet.dc.html',
-    };
-    const bgById = { panacea: '#2f5a3c' };
-    const srcById = { 'marrow-bakery': 'assets/case-studies/04-001-19a-msmi1pa0-uwgv.webp', panacea: 'assets/case-studies/proj-panacea.webp', ashworth: 'assets/case-studies/proj-ashworth.webp', k1: 'assets/case-studies/proj-k1.webp', 'cross-county': 'assets/case-studies/proj-cross-county.webp', 'circle-k': 'assets/case-studies/proj-circle-k.png' };
-    const projects = this.state.projects;
-    const hovered = this.state.hovered;
-    const ease = 'cubic-bezier(0.22,0.61,0.36,1)';
+    const all = this.services();
+    const active = this.state.filter;
+    const groups = [
+      { id: 'all', label: 'All' },
+      { id: 'identity', label: 'Identity' },
+      { id: 'applications', label: 'Applications' },
+      { id: 'web', label: 'Web' },
+      { id: 'livery', label: 'Livery' },
+    ];
 
-    const panels = projects.map((p, i) => {
-      const open = i === hovered;
-      const comingSoon = p.id === 'k1';
-      const panelStyle = {
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-end',
-        overflow: 'hidden',
-        flex: open ? '4.2 1 0' : '1 1 0',
-        minHeight: 0,
-        padding: '34px',
-        background: 'var(--gl-ink-9)',
-        color: 'var(--gl-cream)',
-        borderRadius: 'var(--radius-lg, 16px)',
-        border: '1px solid var(--border-ink)',
-        cursor: comingSoon ? 'default' : 'pointer',
-        transition: 'flex 460ms ' + ease,
-      };
-      const revealStyle = {
-        overflow: 'hidden',
-        maxHeight: open ? '220px' : '0px',
-        opacity: open ? 1 : 0,
-        transform: open ? 'translateY(0)' : 'translateY(8px)',
-        transition: 'max-height 460ms ' + ease + ', opacity 320ms ' + ease + ', transform 460ms ' + ease,
-      };
+    const filters = groups.map((g) => {
+      const on = g.id === active;
       return {
-        href: comingSoon ? undefined : (hrefById[p.id] || ('Project.dc.html?id=' + p.id)),
-        comingSoon,
-        slotId: 'proj-' + p.id,
-        slotSrc: srcById[p.id] || '',
-        slotBg: bgById[p.id] || 'transparent',
-        num: String(i + 1).padStart(2, '0'),
-        title: p.title,
-        sub: p.sub,
-        cat: p.cat,
-        year: p.year,
-        division: p.division === 'Livery' ? 'Livery' : 'Studio',
-        cta: comingSoon ? 'Coming soon' : (p.hasCaseStudy ? 'Open case study' : 'View project'),
-        onEnter: () => this.setState({ hovered: i }),
-        panelStyle,
-        revealStyle,
+        label: g.label,
+        onClick: () => this.setState({ filter: g.id }),
+        style: {
+          font: '300 11px/1 var(--font-body)',
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
+          padding: '10px 16px',
+          borderRadius: 'var(--radius-full,999px)',
+          border: '1px solid ' + (on ? 'var(--border-ink)' : 'var(--border-default)'),
+          background: on ? 'var(--gl-ink-9)' : 'transparent',
+          color: on ? 'var(--gl-cream)' : 'var(--text-secondary)',
+          cursor: 'pointer',
+          transition: 'all 180ms cubic-bezier(0.22,0.61,0.36,1)',
+        },
       };
     });
 
-    return { panels };
+    const shown = active === 'all' ? all : all.filter((s) => s.g === active);
+    const cards = shown.map((s, i) => ({
+      onOpen: () => this.setState({ open: s.title, slide: 0 }),
+      onKey: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.setState({ open: s.title, slide: 0 }); } },
+      img: s.img,
+      cover: !!s.img && s.fit !== 'contain',
+      contain: !!s.img && s.fit === 'contain',
+      needsArt: !s.img,
+      greyBg: /^Brand Guide/.test(s.title),
+      numColor: s.img && s.fit !== 'contain' ? 'rgba(255,252,243,0.75)' : 'var(--text-muted)',
+      num: String(all.indexOf(s) + 1).padStart(2, '0'),
+      group: s.group,
+      title: s.title,
+      note: s.note,
+    }));
+
+    const openIdx = all.findIndex((s) => s.title === this.state.open);
+    const lb = openIdx >= 0 ? all[openIdx] : null;
+
+    const slides = lb && lb.slides && lb.slides.length > 1 ? lb.slides : null;
+    const si = slides ? Math.min(this.state.slide, slides.length - 1) : 0;
+    const stageImg = slides ? slides[si].img : (lb ? lb.img : '');
+
+    return {
+      filters,
+      cards,
+      countLabel: shown.length + (shown.length === 1 ? ' service' : ' services'),
+      lightbox: !!lb,
+      lbImgEl: stageImg ? React.createElement('img', {
+        src: stageImg, alt: '', key: stageImg,
+        style: { display: 'block', alignSelf: 'center', maxWidth: '100%', maxHeight: slides ? '62vh' : '70vh', width: 'auto', height: 'auto', objectFit: 'contain', borderRadius: 'var(--radius-lg,16px)', background: 'var(--gl-cream)', animation: 'wk-scrim-in 200ms cubic-bezier(0.22,0.61,0.36,1)' },
+      }) : null,
+      lbIsCarousel: !!slides,
+      stopClick: (e) => e.stopPropagation(),
+      lbPrev: () => this.step(-1),
+      lbNext: () => this.step(1),
+      lbSlideLabel: slides ? String(si + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0') + ' — ' + slides[si].caption : '',
+      lbThumbs: (slides || []).map((sl, i) => ({
+        img: sl.img,
+        label: sl.caption,
+        onClick: () => this.setState({ slide: i }),
+        style: {
+          width: '58px', height: '44px', padding: 0, overflow: 'hidden', cursor: 'pointer',
+          borderRadius: '6px', background: 'var(--gl-cream)',
+          border: '1px solid ' + (i === si ? 'var(--gl-cream)' : 'rgba(255,252,243,0.28)'),
+          opacity: i === si ? 1 : 0.55,
+          transition: 'opacity 180ms cubic-bezier(0.22,0.61,0.36,1),border-color 180ms cubic-bezier(0.22,0.61,0.36,1)',
+        },
+      })),
+      lbNoImg: !!lb && !lb.img,
+      lbTitle: lb ? lb.title : '',
+      lbNote: lb ? lb.note : '',
+      lbGroup: lb ? lb.group : '',
+      lbNum: lb ? String(openIdx + 1).padStart(2, '0') : '',
+      closeLightbox: () => this.setState({ open: null }),
+    };
   }
 }
 </script>

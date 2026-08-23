@@ -8,91 +8,23 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/fonts.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/colors.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/typography.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/spacing.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/radius.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/shadow.css">
-  <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/tokens/motion.css">
   <link rel="stylesheet" href="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/styles.css">
+  <link rel="stylesheet" href="assets/site.css">
   <script src="_ds/gridline-studio-design-system-62ae2b7c-d574-4cd8-9fc7-2b662095e831/_ds_bundle.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-68Z0WQS0DZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-68Z0WQS0DZ');
-  </script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "y0db6g86r2");
-  </script>
+  <script src="assets/analytics.js"></script>
   <style>
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;overflow-x:clip;}
-    body{margin:0;background:var(--surface-page);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip;max-width:100%;}
-    a{color:var(--text-primary);text-decoration:none;}
-    a:hover{color:var(--text-secondary);}    ::selection{background:var(--gl-ink-9);color:var(--gl-cream);}
-    .gl-square-btn button:not(.animated-button), .gl-square-btn a{border-radius:0 !important;}
-    select option{background-color:#08070C;color:#FFFCF3;}
-    .gl-next-btn{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-family:var(--font-display);font-weight:500;font-size:15px;padding:10px 20px;border-radius:var(--radius-full);background:var(--gl-ink-9);color:var(--gl-cream);border:1px solid var(--gl-ink-9);transition:background .2s cubic-bezier(0.22,0.61,0.36,1),transform .12s ease;}
-    .gl-next-btn:hover{background:var(--gl-ink-8);color:var(--gl-cream);}
-    .gl-next-btn:active{transform:scale(0.98) translateY(0.5px);}
-    .gl-next-btn .arrow{width:1em;transition:transform .3s cubic-bezier(0.22,0.61,0.36,1);}
-    .gl-next-btn:hover .arrow{transform:translateX(5px);}
-    .gl-next-btn.inverse{background:var(--gl-cream);color:var(--gl-ink-9);border-color:var(--gl-cream);}
-    .gl-next-btn.inverse:hover{background:var(--gl-paper-1);color:var(--gl-ink-9);}
-    select option:hover,select option:checked,select option:focus{background-color:#1F1E24;color:#FFFCF3;}
-    .animated-button{position:relative;display:flex;align-items:center;gap:4px;padding:16px 36px;border:4px solid transparent;font-size:16px;background-color:inherit;border-radius:100px;font-weight:600;color:var(--gl-ink-9);box-shadow:0 0 0 2px var(--gl-ink-9);cursor:pointer;overflow:hidden;transition:all 0.6s cubic-bezier(0.23,1,0.32,1);font-family:var(--font-display);}
-    .animated-button svg{position:absolute;width:24px;fill:var(--gl-ink-9);z-index:9;transition:all 0.8s cubic-bezier(0.23,1,0.32,1);}
-    .animated-button .arr-1{right:16px;}
-    .animated-button .arr-2{left:-25%;}
-    .animated-button .circle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20px;height:20px;background-color:var(--gl-ink-9);border-radius:50%;opacity:0;transition:all 0.8s cubic-bezier(0.23,1,0.32,1);}
-    .animated-button .text{position:relative;z-index:1;transform:translateX(-12px);transition:all 0.8s cubic-bezier(0.23,1,0.32,1);}
-    .animated-button:hover{box-shadow:0 0 0 12px transparent;color:var(--gl-cream);border-radius:12px;}
-    .animated-button:hover .arr-1{right:-25%;}
-    .animated-button:hover .arr-2{left:16px;}
-    .animated-button:hover .text{transform:translateX(12px);}
-    .animated-button:hover svg{fill:var(--gl-cream);}
-    .animated-button:active{scale:0.95;box-shadow:0 0 0 4px var(--gl-ink-9);}
-    .animated-button:hover .circle{width:220px;height:220px;opacity:1;}
-    .work-card{display:flex;width:100%;height:460px;gap:8px;}
-    .work-card a{position:relative;flex:1;overflow:hidden;border-radius:16px;background:var(--gl-ink-9);border:1px solid var(--border-ink);display:flex;justify-content:center;align-items:center;transition:flex 0.55s cubic-bezier(0.22,0.61,0.36,1);text-decoration:none;}
-    .work-card a:hover{flex:4;color:var(--gl-cream);}
-    .work-card a    .work-card a::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,7,12,0.25),rgba(8,7,12,0.65));pointer-events:none;}
-    .work-card a span{position:relative;z-index:2;min-width:16em;text-align:center;transform:rotate(-90deg);transition:transform 0.55s cubic-bezier(0.22,0.61,0.36,1);text-transform:uppercase;color:var(--gl-cream);letter-spacing:0.14em;font-family:var(--font-display);font-weight:600;font-size:28px;white-space:nowrap;}
-    .work-card a:hover span{transform:rotate(0);}
     .tier-link{position:relative;overflow:hidden;}
     .tier-link > span.tier-pattern{position:absolute;inset:0;z-index:0;pointer-events:none;background:var(--gl-ink-8);transform:translateX(-101%);transition:transform 0.55s cubic-bezier(0.23,1,0.32,1);}
     .tier-link:hover span.tier-pattern{transform:translateX(0);}
     .tier-link > span:not(.tier-pattern){position:relative;z-index:1;transition:transform 0.55s cubic-bezier(0.23,1,0.32,1);}
     .tier-link:hover > span:not(.tier-pattern){transform:translateX(10px);}
-    /* ===== Mobile optimization ===== */
-    @media (max-width:768px){
-      main [style*="px 40px"], main [style*="0 40px"]{padding-left:24px!important;padding-right:24px!important;}
-      main h1{font-size:clamp(32px,8vw,56px)!important;line-height:1.06!important;}
-      main h2{font-size:clamp(26px,6vw,40px)!important;line-height:1.12!important;}
-    }
-    @media (max-width:640px){
-      main [style*="grid-template-columns"]{grid-template-columns:1fr!important;}
-      main [style*="px 40px"], main [style*="0 40px"]{padding-left:18px!important;padding-right:18px!important;}
-      .work-card{flex-direction:column;height:auto!important;}
-      .work-card a{flex:none!important;height:150px!important;}
-      .work-card a:hover{flex:none!important;}
-      .work-card a span{transform:rotate(0)!important;min-width:0!important;font-size:20px!important;}
-    }
+
   </style>
 </helmet>
 
 <div style="min-height:100vh;background:var(--surface-page);color:var(--text-primary);">
 
-  <dc-import name="Header" hint-size="100%,105px"></dc-import>
+  <dc-import name="Header" hint-size="100%,105px" style="position:sticky;top:0;z-index:90;"></dc-import>
 
   <main data-screen-label="Home">
 
@@ -101,13 +33,7 @@
       <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);">Gridline Studio — Small-business rebranding</div>
       <h1 style="font-family:var(--font-display);font-weight:600;font-size:92px;line-height:1.0;letter-spacing:-0.035em;color:var(--text-primary);margin:28px 0 0;max-width:1040px;text-wrap:balance;">Helping small town businesses look as good as they deserve.</h1>
       <p style="font-family:var(--font-body);font-weight:300;font-size:21px;line-height:1.55;color:var(--text-secondary);max-width:620px;margin:32px 0 0;">Gridline Studio helps independent businesses build brands that feel cohesive, current, and memorable with complete rebrands, logos and typography, signage, social media, and websites.</p>
-      <div class="gl-square-btn" style="display:flex;gap:12px;margin-top:40px;flex-wrap:wrap;">
-        <button class="animated-button" onClick="{{ goWork }}">
-          <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
-          <span class="text">View portfolio</span>
-          <span class="circle"></span>
-          <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
-        </button>
+      <div style="display:flex;gap:12px;margin-top:40px;flex-wrap:wrap;">
         <button class="animated-button" onClick="{{ goContact }}">
           <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
           <span class="text">Let’s work together</span>
@@ -117,17 +43,33 @@
       </div>
     </section>
 
-    <!-- Selected work teaser -->
+    <!-- Work teaser -->
     <section style="max-width:1200px;margin:0 auto;padding:0 40px 112px;">
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;border-top:1px solid var(--border-ink);padding-top:24px;">
-        <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);">Selected work — 2026</div>
-        <a href="Work.dc.html" class="gl-next-btn"><span class="text">View all work</span><svg class="arrow" viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></a>
+      <div style="border-top:1px solid var(--border-ink);padding-top:24px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;">
+        <div style="max-width:620px;">
+          <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-muted);">Work</div>
+          <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(30px,5vw,48px);line-height:1.08;letter-spacing:-0.03em;margin:18px 0 0;text-wrap:balance;">See the piece before you commission it.</h2>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:18px;line-height:1.6;color:var(--text-secondary);margin:20px 0 0;">Every service, shown as work — from a single mark to a full brand system, applications, websites, and race liveries.</p>
+        </div>
+        <a href="Work.dc.html" class="gl-next-btn"><span class="text">View the work</span><svg class="arrow" viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></a>
       </div>
-
-      <div class="work-card">
-        <a href="Panacea Junkiez.dc.html"><img id="home-work-panacea" src="assets/case-studies/home-work-panacea.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"><span>Panacea Junkiez</span></a>
-        <a href="Ashworth.dc.html"><img id="home-work-ashworth" src="assets/case-studies/home-work-ashworth.webp" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"><span>Ashworth</span></a>
-        <a href="Circle K - ARCA Chevrolet.dc.html"><img id="home-work-arca" src="assets/case-studies/home-work-arca.png" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;"><span>ARCA Chevrolet</span></a>
+      <div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-lg,16px);overflow:hidden;">
+        <a href="Work.dc.html" style="display:flex;flex-direction:column;gap:6px;padding:26px 24px;background:var(--surface-card);color:inherit;text-decoration:none;transition:background 180ms cubic-bezier(0.22,0.61,0.36,1);" style-hover="background:var(--surface-sunken);">
+          <span style="font-family:var(--font-display);font-weight:600;font-size:21px;letter-spacing:-0.02em;">Identity</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:14px;color:var(--text-secondary);">Marks, color, type, brand guides</span>
+        </a>
+        <a href="Work.dc.html" style="display:flex;flex-direction:column;gap:6px;padding:26px 24px;background:var(--surface-card);color:inherit;text-decoration:none;transition:background 180ms cubic-bezier(0.22,0.61,0.36,1);" style-hover="background:var(--surface-sunken);">
+          <span style="font-family:var(--font-display);font-weight:600;font-size:21px;letter-spacing:-0.02em;">Applications</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:14px;color:var(--text-secondary);">Signage, menus, stationery, social</span>
+        </a>
+        <a href="Work.dc.html" style="display:flex;flex-direction:column;gap:6px;padding:26px 24px;background:var(--surface-card);color:inherit;text-decoration:none;transition:background 180ms cubic-bezier(0.22,0.61,0.36,1);" style-hover="background:var(--surface-sunken);">
+          <span style="font-family:var(--font-display);font-weight:600;font-size:21px;letter-spacing:-0.02em;">Web</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:14px;color:var(--text-secondary);">Sites built from your brand system</span>
+        </a>
+        <a href="Work.dc.html" style="display:flex;flex-direction:column;gap:6px;padding:26px 24px;background:var(--surface-card);color:inherit;text-decoration:none;transition:background 180ms cubic-bezier(0.22,0.61,0.36,1);" style-hover="background:var(--surface-sunken);">
+          <span style="font-family:var(--font-display);font-weight:600;font-size:21px;letter-spacing:-0.02em;">Livery</span>
+          <span style="font-family:var(--font-body);font-weight:300;font-size:14px;color:var(--text-secondary);">Sim-ready and print-ready race cars</span>
+        </a>
       </div>
     </section>
 
@@ -137,12 +79,12 @@
         <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;">
           <div style="max-width:560px;">
             <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-inverse-secondary);">What we do</div>
-            <h2 style="font-family:var(--font-display);font-weight:600;font-size:42px;letter-spacing:-0.03em;margin:16px 0 0;color:var(--text-inverse);text-wrap:balance;">Three packages, one method.</h2>
+            <h2 style="font-family:var(--font-display);font-weight:600;font-size:42px;letter-spacing:-0.03em;margin:16px 0 0;color:var(--text-inverse);text-wrap:balance;">À la carte. Pick what you need.</h2>
           </div>
           <a href="Services.dc.html" class="gl-next-btn inverse"><span class="text">See all services</span><svg class="arrow" viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></a>
         </div>
         <div style="margin-top:36px;">
-          <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+          <sc-for list="{{ menuCats }}" as="s" hint-placeholder-count="3">
             <a class="tier-link" href="Services.dc.html" style="display:grid;grid-template-columns:80px 1fr auto;gap:40px;align-items:baseline;width:100%;text-align:left;border-top:1px solid var(--border-inverse);padding:22px 0;color:var(--text-inverse);">
               <span class="tier-pattern"></span>
               <span style="font-family:var(--font-body);font-weight:300;font-size:13px;letter-spacing:0.1em;color:var(--text-inverse-secondary);">{{ s.n }}</span>
@@ -170,8 +112,8 @@
         </div>
         <div>
           <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">What</div>
-          <h3 style="font-family:var(--font-display);font-weight:600;font-size:23px;line-height:1.2;letter-spacing:-0.015em;margin:16px 0 12px;">Complete rebrands, flat-priced.</h3>
-          <p style="font-family:var(--font-body);font-weight:300;font-size:16px;line-height:1.62;color:var(--text-secondary);margin:0;">Logos and typography, color systems, signage, social media, and websites, delivered as clear packages, never hourly work, with a branding guide you can run on your own once we're done.</p>
+          <h3 style="font-family:var(--font-display);font-weight:600;font-size:23px;line-height:1.2;letter-spacing:-0.015em;margin:16px 0 12px;">Brand work, priced à la carte.</h3>
+          <p style="font-family:var(--font-body);font-weight:300;font-size:16px;line-height:1.62;color:var(--text-secondary);margin:0;">Logos and typography, color systems, signage, social media, and websites, priced piece by piece, never hourly work, with a branding guide you can run on your own once we're done.</p>
         </div>
         <div>
           <div style="font-family:var(--font-body);font-weight:300;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);">Why</div>
@@ -196,30 +138,15 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { projects: [], services: [] };
-
-  async componentDidMount() {
-    try {
-      const m = await import('./site-data.js');
-      this.setState({ projects: m.projects || [], services: m.services || [] });
-    } catch (e) { /* ignore */ }
-  }
-
   renderVals() {
-    const projects = this.state.projects;
-    const hrefById = { panacea: 'Panacea Junkiez.dc.html', ashworth: 'Ashworth.dc.html', k1: 'K1 Fitness.dc.html' };
-    const withHref = (p) => ({ ...p, href: hrefById[p.id] || ('Project.dc.html?id=' + p.id) });
-    const featured = projects.filter((p) => p.featured).map(withHref);
-    const featuredMain = featured[0] || {};
-    const homeGrid = featured.filter((p) => p.id !== 'panacea');
-
-    const clientTypes = ['Restaurants & cafés', 'Juice & smoothie bars', 'Retail shops', 'Gyms & fitness', 'Local services'];
-
+    // Service tiers teased on the home page; full pricing lives in Services.dc.html.
+    const menuCats = [
+      { n: '01', title: 'Logo & identity', timeline: 'from $170' },
+      { n: '02', title: 'Applications & collateral', timeline: 'from $170' },
+      { n: '03', title: 'Larger scope', timeline: '$1,275+' },
+    ];
     return {
-      featuredMain, homeGrid,
-      services: this.state.services,
-      clientTypes,
-      goWork: () => { window.location.href = 'Work.dc.html'; },
+      menuCats,
       goContact: () => { window.location.href = 'Contact.dc.html'; },
     };
   }
