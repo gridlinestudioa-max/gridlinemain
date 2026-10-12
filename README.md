@@ -5,10 +5,11 @@ https://will-potter.com. This repo now only forwards old URLs there.
 
 | Old path | Goes to |
 |---|---|
-| `/`, `index.html`, `Home.dc.html`, `Contact.dc.html` | `https://will-potter.com/HOME.dc.html` |
-| `Work.dc.html` | `https://will-potter.com/WORK.dc.html` |
-| `Services.dc.html` | `https://will-potter.com/SERVICES.dc.html` |
-| `About.dc.html` | `https://will-potter.com/ABOUT.dc.html` |
+| `/`, `index.html`, `Home.dc.html` | `https://will-potter.com/` |
+| `Contact.dc.html` | `https://will-potter.com/contact/` |
+| `Work.dc.html` | `https://will-potter.com/work/` |
+| `Services.dc.html` | `https://will-potter.com/services/` |
+| `About.dc.html` | `https://will-potter.com/about/` |
 | anything else (via `404.html`) | Home (or the matching page above, matched by file name) |
 
 ## Why these are not true 301s
